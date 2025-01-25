@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root{
+    --color1:#3cc867;
+    --color2:#fdfdfd;
+}
+body{
+    position: relative;
+}
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: var(--color2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0 20px; */
+    position: relative;
+    z-index: 100;
+}
+.header .logo{
+    width: 100px;
+    height: 60px;
+    margin-left: -70px;
+   
+}
+.header .logo img{
+    width: 100%;
+    height: 100%;
+}
+.header .second-icon .fa{
+    margin-right: 40px;
+    font-size: 1.55em;
+    color: #666;
+}
+.header .third-icons{
+    padding: 0 10px;
+}
+.header .third-icons .fa{
+    color: #666;
+    font-size: 1.44em;
+    margin-right: 10px;
+}
+.header .third-icons hr{
+    
+}
+.header .third-icons span{
+    font-size: 1.1em;
+}
+.header .third-icons .sing-up{
+    margin-left: 3px;
+    background-color: rgb(9, 232, 9);
+    padding: 10px;
+    color: #fff;
+    border-radius: 10px;
+
+    
+}
+.side-bar{
+    width: 200px;
+    min-height: 100vh;
+    background-color: var(--color2);
+    position: absolute;
+   
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    
+    
+} 
+.side-bar .icons{
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.side-bar .icons .fa{
+    font-size: 1.55em;
+}
+#toggler{
+    display: none;
+}
+.header >label .fa{
+    font-size: 2em;
+    color: red;
+    margin-left: 20px;
+}
+#toggler:checked ~ .side-bar{
+    width: 60px;
+    
+}
+#toggler:checked ~ .side-bar span{
+    display: none;
+    
+}
+#toggler:checked ~ .main{
+    left: 60px;
+    width: 100%;
+}
+.main{
+    min-height: 100vh;
+    width: calc(100% - 200px) ;
+    position: absolute;
+    left: 200px;
+    top: 60px;
+}
+.main .home{
+    width: 100%;
+    height: 400px;
+    /* background-color: #3cc867; */
+}
+.main .home .home-image{
+    width: 100%;
+    height: 100%;
+}
+
+.main .home .home-image::before{
+    content: "";
+    width: 100%;
+    height: 400px;
+    background-color: var(--color1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    opacity: 90%;
+}
+.main .home .home-image img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.main .home .content{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 101;
+    text-align: center;
+}
+.main .home .content h1{
+    font-size: 4.5em;
+    margin-bottom: 15px;
+}
+.main .home .content h1:nth-child(1){
+    color: yellow;
+    margin-bottom: -10px;
+}
+.main .home .content:nth-child(2){
+    color: #fdfdfd;
+}
